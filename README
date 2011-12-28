@@ -1,0 +1,6 @@
+# Project Name: pybyk
+# Author: Nishanth Amuluru
+# Description:
+#      A collection of scripts that use python googlemaps api and 
+#      googlemaps elevation url to predict the route between two
+#      places and map the terrain of the route.
