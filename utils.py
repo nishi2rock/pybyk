@@ -26,9 +26,14 @@ def gc_dist(point1, point2):
     lat2 = lat2 * math.pi / 180
     lng2 = lng2 * math.pi / 180
 
-    return radius * math.acos(math.sin(lat1) * math.sin(lat2) + 
-                              math.cos(lat1) * math.cos(lat2) * math.cos(lng2 - lng1)
-                             )
+    try:
+        dist = radius * math.acos(math.sin(lat1) * math.sin(lat2) + 
+                                  math.cos(lat1) * math.cos(lat2) * 
+                                  math.cos(lng2 - lng1)
+                                 )
+        return dist
+    except ValueError:
+        return 0
 
 
 def range_of_points(point1, point2, nPoints):
